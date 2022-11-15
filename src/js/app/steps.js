@@ -14,7 +14,7 @@ import {
 } from "../helpers/loader";
 import { disableInputEmail } from "../helpers/utils";
 import { startDataLayerSession } from "./events";
-import { sendData } from "./question";
+
 
 const saveStep = async (inputOptions) => {
 	let options = {
@@ -200,7 +200,6 @@ export const renderSteps = () => {
 				if (__isDev) console.log(`validation-#${idSection}:`, isValidate);
 
 				if (isValidate) {
-					sendData({ field: "my response" });
 					saveStep({
 						el: button,
 						discount: "15% OFF",
