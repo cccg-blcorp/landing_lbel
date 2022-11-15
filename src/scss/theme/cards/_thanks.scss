@@ -125,7 +125,8 @@
 					line-height: 1.1em;
 
 					@include break-down("lg") {
-						display: none;
+						/* display: none; */
+						font-size: 1.3rem;
 					}
 				}
 			}
