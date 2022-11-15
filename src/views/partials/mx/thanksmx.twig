@@ -1,4 +1,54 @@
 <section id="thanks" class="page page-thanks" data-toggle="block-page" data-active="true">
+	<script type="text/javascript">
+		function submitRespuesta () {
+			
+			const data = document.getElementById("textareaRpta").value;
+
+			console.log('method sendData',data);
+			/*Credenciales PROD */
+			var apiUrl = "https://api.belcorp.biz";
+			var clientId = "interfacesIKU";
+			var clientSecret = "vjm8GduiaTUpqT17gYW4jYqk8S88oC5DoRg2/WJZvpg=";
+
+			// Credenciales QA
+			// var apiUrl = "https://api-qa.belcorp.biz";
+			// var clientId = "interfacesIKU";
+			// var clientSecret = "2KgfGQ6g7cKh/G7GwaSFkbOjQS8VQ9QrzbXieSUlcrw=";
+
+			var oauthTokenSettings = {
+				url: apiUrl + "/oauth/token",
+				method: "POST",
+				headers: {
+					"Content-Type": "application/x-www-form-urlencoded",
+				},
+				data: {
+					grant_type: "client_credentials",
+					client_id: clientId,
+					client_secret: clientSecret,
+					scope: "scopeIKU",
+				},
+			};
+
+			$.ajax(oauthTokenSettings).done(function (response) {
+				var ecrmCampaignsSettings = {
+					url: apiUrl + "/ecrm_campaigns",
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+						"x-access-token": response.access_token,
+					},
+					data: JSON.stringify({
+						userId: localStorage.getItem('idCDC'),
+						initiative: 'LB_PROGRESSIVE_PROFILING',
+						fields: {
+							comment: data
+						},
+					}),
+				};
+				$.ajax(ecrmCampaignsSettings);
+			});
+		} 
+	</script>
 	<div class="page-container">
 		<div id="thanks-page-wrapper" class="page-wrapper">
 			<div class="card card-thanks">
@@ -32,8 +82,13 @@
 							<div class="card-body-text">
 								<p style="margin-bottom: 20px">Para finalizar tu participación en el concurso, completa esta pregunta:</p>
 								<p style="font-weight: bold">¿Qué esperas que los productos de L'BEL hagan por tu piel?</p>
-								<textarea class="form-textarea" rows="4" cols="47" style="margin-top: 20px; margin-bottom: 17px"></textarea>
-								<a id="link-buy-here" href="https://lbel.tiendabelcorp.com/mx/cuidado-de-la-piel/c/lbel-01" target="_blank" class="button button-third-transparent button-min">Enviar Respuesta</a>
+								<textarea id="textareaRpta" class="form-textarea" rows="4" cols="47" style="margin-top: 20px; margin-bottom: 17px"></textarea>
+								
+								<button onClick="submitRespuesta()" id="btn-respuesta-concurso" type="submit" class="button button-third button-tab-white mt-lg-3" data-toggle="button-step">
+									Enviar Respuesta <span class="icon icon-arrow-right text-size-xl ml-1"></span>
+								</button>
+
+								<div style="display: none"><a id="link-buy-here" href="https://lbel.tiendabelcorp.com/mx/cuidado-de-la-piel/c/lbel-01" target="_blank" class="button button-third-transparent button-min">Enviar Respuesta</a></div>
 							</div>
 
 							{# <div class="card-body-wrapper">
