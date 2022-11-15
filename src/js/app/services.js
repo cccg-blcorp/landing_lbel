@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { updateStaticState } from './state'
 
-const URL_BASE = 'https://l2gyqis94i.execute-api.us-east-1.amazonaws.com/production'
+const URL_BASE = 'https://emzvotezng.execute-api.us-east-1.amazonaws.com/prod/'
 const MAX_ATTEMPTS = 5
 
 export const login = data => {
