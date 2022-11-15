@@ -1,0 +1,109 @@
+.card {
+	position: relative;
+
+	.card-voucher {
+		bottom: 0;
+		position: absolute;
+		left: -197px;
+		width: 197px;
+		z-index: 1;
+
+		@include break-down("lg") {
+			bottom: inherit;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			left: 50%;
+			max-width: 400px;
+			position: fixed;
+			right: 0;
+			top: 100%;
+			transform: translateX(-50%);
+			width: 100%;
+			z-index: z-index("voucher");
+		}
+		&.show {
+			@include break-down("lg") {
+				transition: ease all .25s;
+				transform: translateX(-50%) translateY(-100%);
+			}
+		}
+
+		button[data-toggle="close-voucher"] {
+			display: none;
+
+			@include break-down("lg") {
+				display: block;
+				position: absolute;
+				right: 8px;
+				top: 5px;
+				z-index: 1;
+			}
+		}
+
+		&-header {
+			background: color("purple-500");
+			color: color("white");
+			padding: 15px;
+			position: relative;
+
+			h3,
+			h1 {
+				font-family: fontf("200");
+			}
+
+			h3 {
+				font-size: 1.8rem;
+			}
+
+			h1 {
+				font-size: 3.4rem;
+			}
+
+			p {
+				font-size: 1.2rem;
+			}
+		}
+
+		&-body {
+			background-image: url(#{$path_assets} + "images/backgrounds/wood.jpg");
+			background-size: cover;
+			padding: 25px 10px 15px 10px;
+
+			& > p {
+				font-size: 1.2rem;
+				font-family: fontf("200");
+				color: color("gray-700");
+				text-align: center;
+
+				a {
+					text-decoration: underline;
+				}
+			}
+
+		}
+
+		&-code {
+			background: color("white");
+			padding: 12px 0;
+			width: 100%;
+			border-radius: 30px;
+			text-align: center;
+			margin-bottom: 8px;
+			box-shadow: 0 3px 6px rgba(color("black"), .16);
+
+			p,
+			h1 {
+				font-family: fontf("200");
+			}
+
+			p {
+				font-size: 1.2rem;
+			}
+
+			h1 {
+				font-size: 1.9rem;
+				line-height: 1.1em;
+			}
+		}
+	}
+}

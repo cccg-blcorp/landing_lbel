@@ -1,0 +1,11 @@
+@function weight($weight-name) {
+	$weight-size: 0px;
+
+	@each $weight-key, $weight-value in $weights {
+		@if $weight-name == #{"" + $weight-key} {
+			$weight-size: $weight-value;
+		}
+	}
+
+	@return $weight-size;
+}

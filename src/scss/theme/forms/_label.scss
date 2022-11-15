@@ -1,0 +1,27 @@
+.form {
+	&-label {
+		color: color("white");
+		display: block;
+		font-family: fontf("200");
+		font-size: 1.6rem;
+		margin-bottom: 26px;
+		text-align: center;
+
+		&.form-label-dark,
+		&.form-label-ligth {
+			margin-bottom: 16px;
+	
+			@media screen and (min-width: 992px) and (max-height: 805px) {
+				margin-bottom: 8px;
+			}
+		}
+
+		&.form-label-dark {
+			color: color("purple-800");
+		}
+		
+		&.form-label-light {
+			color: color("white");
+		}
+	}
+}

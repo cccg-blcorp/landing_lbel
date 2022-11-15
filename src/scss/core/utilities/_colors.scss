@@ -1,0 +1,8 @@
+$text-colors: (
+	color: (
+		class: "color",
+		values: $colors
+	)
+);
+
+$utilities: map-merge($utilities, $text-colors);

@@ -1,0 +1,12 @@
+$font-raleway-book: "Raleway Regular", Helvetica, sans-serif;
+$font-raleway-bold: "Raleway Bold", Helvetica, sans-serif;
+$font-dalmatins: "Dalmatins", Helvetica, sans-serif;
+$font-freight: "Freight", Helvetica, sans-serif;
+
+$fonts: (
+	100: $font-raleway-book,
+	200: $font-raleway-bold,
+	300: $font-dalmatins,
+	500: $font-freight,
+	icons: "clicons",
+);

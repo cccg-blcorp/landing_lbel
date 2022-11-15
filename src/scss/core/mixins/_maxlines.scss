@@ -1,0 +1,10 @@
+@mixin maxlines($lines) {
+	@for $i from 1 through $lines {
+		.max-lines-#{$i} {
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: $i;
+			display: -webkit-box;
+			overflow: hidden;
+		}
+	}
+}

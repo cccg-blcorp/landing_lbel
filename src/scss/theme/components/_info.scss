@@ -1,0 +1,249 @@
+.info {
+	background: color("white");
+	padding: 24px 15px;
+
+	@include break-down("lg") {
+		padding: 0;
+	}
+
+	&-wrapper {
+		column-gap: 20px;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		position: relative;
+		
+		@include break-down("lg") {
+			column-gap: inherit;
+			display: flex;
+			grid-template-columns: inherit;
+			justify-content: flex-end;
+			padding: 20px 15px 40px 15px;
+		}
+	}
+
+	figure {
+		width: 100%;
+
+		@include break-down("lg") {
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&-content {
+		@include break-down("lg") {
+			position: relative;
+			z-index: 2;
+			background: color("white");
+			width: 60%;
+			padding: 10px;
+		}
+
+		h1 {
+			color: color("purple-800");
+			font-family: fontf("500");
+			font-size: 3.4rem;
+			line-height: 1.1em;
+			margin-bottom: 15px;
+			text-transform: uppercase;
+
+			@include break-down("lg") {
+				font-family: fontf("200");
+				font-size: 1.6rem;
+				line-height: 1.3em;
+				text-transform: none;
+			}
+		}
+
+		p {
+				@include break-down("lg") {
+					font-size: 1.3rem;
+				}
+		}
+	}
+}
+
+.info-simple {
+	background: color("white");
+	padding: 0 20px;
+	
+	&-wrapper {
+		text-align: center;
+		// align-items: center;
+		// column-gap: 20px;
+		// display: grid;
+		// grid-template-columns: 1fr 2fr;
+		position: relative;
+		
+		@include break-down("lg") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	figure {
+		width: 100%;
+		height: 100%;
+		
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&-content {
+		padding: 10px 0;
+
+		h1 {
+			font-family: fontf("200");
+			font-size: 1.8rem;
+			line-height: 1.1em;
+			margin-bottom: 15px;
+
+			@include break-down("lg") {
+				font-size: 1.3rem;
+				margin-bottom: 10px;
+			}
+		}
+
+		p {
+			font-size: 1.7rem;
+			line-height: 1.12em;
+
+			@include break-down("lg") {
+				font-size: 1.3rem;
+			}
+		}
+	}
+}
+
+.info-thanks {
+	background-image: url(#{$path_assets} + "images/backgrounds/texture-3.png");
+	background-size: cover;
+	margin: 40px 0 60px 0;
+	position: relative;
+
+	@include break-down("lg") {
+		margin: 0;
+	}
+
+	@include max-w(685px) {
+		// background-image: url(#{$path_assets} + "images/backgrounds/texture-4.jpg");
+		background-image: url(#{$path_assets} + "images/info/thanks_responsive.jpg");
+		background-size: cover;
+		background-position: 0vw center;
+		background-repeat: no-repeat;
+	}
+	
+	&-image {
+		background-image: url(#{$path_assets} + "images/info/thanks.jpg");
+		background-size: cover;
+		background-position: -6vw center;
+		
+		// @include max-w(685px) {
+		// 	background-image: url(#{$path_assets} + "images/info/thanks_responsive.jpg");
+		// 	background-position: 0vw center;
+		// 	background-repeat: no-repeat;
+		// 	height: 100%;
+		// 	left: 0;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	width: 60%;
+		// 	z-index: 1;
+		// }
+	}
+
+	&-wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		
+		@include break-down("lg") {
+			grid-template-columns: 2fr 3fr;
+		}
+
+		@include max-w(685px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&-content {
+		padding: 30px 20px;
+
+		@include max-w(685px) {
+			margin-left: auto;
+			max-width: 300px;
+			padding: 30px 20px 60px 20px;
+		}
+
+		@include max-w(518px) {
+			max-width: 200px;
+			padding: 30px 20px 60px 20px;
+		}
+
+		@include max-w(333px) {
+			padding: 30px 20px 80px 20px;
+		}
+		
+		h1 {
+			color: color("purple-800");
+			font-family: fontf("500");
+			font-size: 2.8rem;
+			line-height: 1.1em;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+
+			@include break-down("lg") {
+				font-size: 2.2rem;
+			}
+
+			@include max-w(685px) {
+				color: color("blue-900");
+				font-family: fontf("200");
+				font-size: 1.6rem;
+				line-height: 1.3em;
+				text-transform: none;
+			}
+		}
+
+		p {
+			font-size: 1.8rem;
+			line-height: 1.1em;
+			margin-bottom: 20px;
+
+			@include break-down("lg") {
+				font-size: 1.6rem;
+			}
+
+			@include max-w(685px) {
+				font-size: 1.2rem;
+				line-height: 1.3em;
+			}
+		}
+
+		small {
+			display: block;
+			font-size: 1.1rem;
+			line-height: 1.3em;
+			margin-top: 15px;
+
+			@include max-w(685px) {
+				bottom: 15px;
+				font-size: 1.3rem;
+				left: 10px;
+				position: absolute;
+				right: 10px;
+				text-align: center;
+				z-index: 1;
+			}
+		}
+	}
+}

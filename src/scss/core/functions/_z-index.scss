@@ -1,0 +1,11 @@
+@function z-index($z-index-name) {
+	$z-index: transparent;
+
+	@each $z-index-key, $z-index-value in $z-indexes {
+		@if $z-index-name == #{"" + $z-index-key} {
+			$z-index: $z-index-value;
+		}
+	}
+
+	@return $z-index;
+}

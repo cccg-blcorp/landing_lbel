@@ -1,0 +1,14 @@
+.card {
+	&.card-white {
+		background: color("white");
+		box-shadow: 0 3px 6px rgba(color("black"), .16);
+
+		@include break-down("lg") {
+			box-shadow: none;
+		}
+	}
+
+	&.card-purple {
+		background: color("purple-800");
+	}
+}

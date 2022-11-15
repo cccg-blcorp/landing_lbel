@@ -1,0 +1,43 @@
+@font-face {
+	font-family: "Freight";
+	src: url(#{$path_assets} + "fonts/Freight-BigBook.eot");
+	src: url(#{$path_assets} + "fonts/Freight-BigBook.eot?#iefix") format("embedded-opentype"),
+		url(#{$path_assets} + "fonts/Freight-BigBook.woff2") format("woff2"),
+		url(#{$path_assets} + "fonts/Freight-BigBook.woff") format("woff"),
+		url(#{$path_assets} + "fonts/Freight-BigBook.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Dalmatins";
+	src: url(#{$path_assets} + "fonts/Dalmatins.eot");
+	src: url(#{$path_assets} + "fonts/Dalmatins.eot?#iefix") format("embedded-opentype"),
+		url(#{$path_assets} + "fonts/Dalmatins.woff2") format("woff2"),
+		url(#{$path_assets} + "fonts/Dalmatins.woff") format("woff"),
+		url(#{$path_assets} + "fonts/Dalmatins.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Raleway Bold";
+	src: url(#{$path_assets} + "fonts/Raleway-Bold.eot");
+	src: url(#{$path_assets} + "fonts/Raleway-Bold.eot?#iefix") format("embedded-opentype"), url(#{$path_assets} + "fonts/Raleway-Bold.woff2") format("woff2"),
+		url(#{$path_assets} + "fonts/Raleway-Bold.woff") format("woff"), url(#{$path_assets} + "fonts/Raleway-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Raleway Regular";
+	src: url(#{$path_assets} + "fonts/Raleway-Regular.eot");
+	src: url(#{$path_assets} + "fonts/Raleway-Regular.eot?#iefix") format("embedded-opentype"), url(#{$path_assets} + "fonts/Raleway-Regular.woff2") format("woff2"),
+		url(#{$path_assets} + "fonts/Raleway-Regular.woff") format("woff"), url(#{$path_assets} + "fonts/Raleway-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

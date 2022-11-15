@@ -1,0 +1,16 @@
+@mixin root() {
+	$vars: (
+		breakpoint: $breakpoints,
+		color: $colors,
+		radius: $radius,
+		font: $fonts
+	);
+	
+	:root {
+		@each $var-type, $values in $vars {
+			@each $value-key, $value in $values {
+				--cl-#{$var-type}-#{"" + $value-key}: #{$value};
+			}
+		}
+	}
+}

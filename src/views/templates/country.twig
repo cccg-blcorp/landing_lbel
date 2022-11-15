@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es" style="overflow-y: hidden;">
+	<head>
+
+		<!-- <meta-tags> -->
+
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+		<meta name="description" content="{{ metaData.description }}">
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:domain" content="{{ metaData.twitterDomain }}" />
+		<meta name="twitter:site" content="{{ metaData.twitterSite }}">
+		<meta name="twitter:title" content="{{ metaData.title }}" />
+		<meta name="twitter:description" content="{{ metaData.description }}" />
+		<meta name="twitter:image" content="{{ metaData.url + metaData.image }}" />
+		
+		{# <!-- Facebook -->
+		<meta property="fb:app_id" content="{{ metaData.facebookAppID }}" /> #}
+		
+		<!-- Global -->
+		<meta property="og:locale" content="es_ES">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="{{ metaData.title }}">
+		<meta property="og:description" content="{{ metaData.description }}">
+		<meta property="og:url" content="{{ metaData.url }}">
+		<meta property="og:image" content="{{ metaData.url + metaData.image }}" />
+
+
+		<!-- </meta-tags> -->
+		
+		<!-- <title> -->
+		{% block title %}
+			{# Title Page #}
+			<title>{{ title() }}</title>
+		{% endblock %}
+		<!-- </title> -->
+		
+		<!-- <favicon> -->
+		<link rel="shortcut icon" href="{{ assetMulti("favicon.ico") }}" type="image/x-icon" />
+		<!-- </favicon> -->
+		
+		<!-- <icons> -->
+		<link rel="stylesheet" href="{{ assetMulti("icons/clicons.css") }}">
+		<!-- </icons> -->
+		
+		<!-- <styles> -->
+
+		<link rel="stylesheet" href="{{ scssMulti("styles") }}" />
+		
+		{% block styles %}
+			{# Custom styles by page #}
+		{% endblock %}
+
+		<!-- </styles> -->
+
+		<!-- <scripts-head> -->
+
+		{% block scripts_head %}
+			{# Custom scripts by page #}
+		{% endblock %}
+
+		<!-- Google Tag Manager -->
+		<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+			
+			j.async = true;
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-W9L79Q8');
+		</script>
+		<!-- End Google Tag Manager -->
+		
+		<!-- </scripts-head> -->
+
+	</head>
+
+	<body style="overflow-y: hidden;">
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9L79Q8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
+		{% include "layout/header.twig" %}
+		
+		<!-- <content-layout-base> -->
+		<main>
+			{% block content %}
+				{# Content Page #}
+			{% endblock %}
+		</main>
+		<!-- </content-layout-base> -->
+
+		{# {% include "layout/footer.twig" %} #}
+
+		{% block modals %}
+			{# Set modals #}
+		{% endblock %}
+		
+		<!-- <scripts-body> -->
+
+		{% block scripts_body_before %}
+			{# Custom before scripts by page #}
+		{% endblock %}
+		
+		{% block scripts_body %}
+			{# Custom scripts by page #}
+		{% endblock %}
+
+		<!-- </scripts-body> -->
+		
+	</body>
+</html>

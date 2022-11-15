@@ -1,0 +1,58 @@
+.terms {
+	padding: 60px;
+	background: color("white");
+
+	@include break-down("lg") {
+		padding: 30px;
+	}
+
+	@include break-down("sm") {
+		padding: 30px 15px;
+	}
+
+	.terms-wrapper {
+		max-width: 930px;
+		margin: 0 auto;
+
+		@include break-down("lg") {
+			max-width: 700px;
+		}
+
+		h1 {
+			color: color("purple-800");
+			font-family: fontf("500");
+			font-size: 4.4rem;
+			line-height: 1.1em;
+			text-transform: uppercase;
+
+			@include break-down("md") {
+				font-size: 3rem;
+			}
+		}
+		
+		p {
+			font-size: 2.2rem;
+			color: color("blue-900");
+			line-height: 1.2em;
+
+			@include break-down("md") {
+				font-size: 1.6rem;
+			}
+			
+			strong {
+				font-family: fontf("200");
+			}
+		}
+		
+		a {
+			color: color("purple-800");
+			font-family: fontf("200");
+			font-size: 1.8rem;
+			text-decoration: underline;
+
+			@include break-down("md") {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}

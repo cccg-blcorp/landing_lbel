@@ -1,0 +1,16 @@
+@mixin responsive($data) {
+	@each $breakpoint-name, $breakpoint-value in $breakpoints {	
+		$classname-input: map-get($data, "class");
+		$property: map-get($data, "property");
+		$property-class: map-get($data, "property-class");
+		$property-value: map-get($data, "property-value");
+
+		$classname: "#{$classname-input}-#{$breakpoint-name}-#{$property-class}";
+		
+		@media (min-width: #{$breakpoint-value}) {
+			.#{$classname} {
+				#{$property}: $property-value !important;
+			}
+		}
+	}
+}

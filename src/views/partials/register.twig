@@ -1,0 +1,119 @@
+<section id="register" class="page page-register" data-toggle="block-page" data-active="false">
+	<div class="page-container">
+		<div class="page-wrapper">
+			<div class="card card-primary card-white">
+				<div class="progressive">
+					<div class="progressive-circle" style="left: 0%">OFF</div>
+				</div>
+				<div class="card-header-register"></div>
+				<div class="card-body-register">
+					<form id="form-register">
+						<h1>Regístrate</h1>
+						<h3>¡Empecemos conociéndonos!</h3>
+						<fieldset class="form-group mb-group">
+							<label class="form-label form-label-dark">¿Cómo te quieres identificar?</label>
+							<div class="grid grid-2 gap-x-1">
+								<div class="gcol">
+									<input
+										id="form-register-names"
+										type="text"
+										name="nm"
+										data-toggle="state-modifier"
+										data-handler="on-text"
+										class="form-field form-field-outline"
+										autocomplete="off"
+										placeholder="Nombres"
+									>
+								</div>
+								<div class="gcol">
+									<input
+										id="form-register-lastname"
+										type="text"
+										name="ln"
+										data-toggle="state-modifier"
+										data-handler="on-text"
+										class="form-field form-field-outline"
+										autocomplete="off"
+										placeholder="Apellidos"
+									>
+								</div>
+							</div>
+							<span class="form-error"></span>
+						</fieldset>
+						<fieldset class="form-group mb-group">
+							<label for="form-register-email" class="form-label form-label-dark">Ingresa tu correo electrónico</label>
+							<input
+								id="form-register-email"
+								type="text"
+								name="e"
+								data-toggle="state-modifier"
+								data-handler="on-text"
+								class="form-field form-field-outline"
+								autocomplete="off"
+								placeholder="yo@mail.com"
+							>
+							<span class="form-error"></span>
+						</fieldset>
+						<fieldset class="form-group mb-group">
+							<label for="form-register-phone" class="form-label form-label-dark">Agrega tu teléfono para más sorpresas</label>
+							<div class="form-phone">
+								<input
+									id="form-register-country-phone"
+									type="hidden"
+									name="ct"
+									data-toggle="state-modifier"
+									data-handler="on-update"
+									value=""
+								>
+								{% include "components/field-phone.twig" %}
+								<div class="form-phone-field">
+									<input
+										id="form-register-phone"
+										type="text"
+										data-type="number"
+										name="pn"
+										data-toggle="state-modifier"
+										data-handler="on-number"
+										class="form-field form-field-outline-phone form-field-left"
+										maxlength="10"
+										autocomplete="off"
+										placeholder="Ingresa tu Número de celular"
+									>
+								</div>
+							</div>
+							<span class="form-error"></span>
+						</fieldset>
+						<fieldset class="form-group mb-group">
+							<div class="form-checkbox">
+								<input
+									id="form-register-terms"
+									type="checkbox"
+									name="ot"
+									data-toggle="state-modifier"
+									data-handler="on-check"
+								>
+								<label for="form-register-terms">Aceptas <a href="{{ page('terminos-y-condiciones') }}" target="_blank">Términos y condiciones, políticas de privacidad.</a></label>
+							</div>
+							<span class="form-error"></span>
+						</fieldset>
+						<fieldset class="form-group mb-group">
+							<div class="form-checkbox">
+								<input
+									id="form-register-promotions"
+									type="checkbox"
+									name="op"
+									data-toggle="state-modifier"
+									data-handler="on-check"
+								>
+								<label for="form-register-promotions">Recibir descuentos, promociones, muestras, novedades y contenido de los productos.</label>
+							</div>
+						</fieldset>
+						<button id="btn-register" type="submit" class="button button-primary button-tab-white" data-toggle="button-step">
+							Guardar y Continuar <span class="icon icon-arrow-right text-size-xl ml-1"></span>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,85 @@
+.card {
+	&.card-primary {
+		position: relative;
+
+		.card-body-birthday {
+			padding: 22px 15px 52px 15px;
+			
+			@media screen and (min-width: 992px) and (max-height: 805px) {
+				padding: 22px 15px 40px 15px;
+			}
+
+			@include break-down("lg") {
+				padding: 12px 15px 40px 15px;
+			}
+
+			form {
+				margin: 0 auto;
+				max-width: 361px;
+				width: 100%;
+			}
+		}
+
+		.card-supheader-birthday {
+			@include break-down("lg") {
+				background-image: url(#{$path_assets} + "images/backgrounds/birthday-mobile.jpg");
+				background-position: center;
+				background-size: cover;
+				min-height: 150px;
+			}
+		}
+
+		.card-header-birthday {
+			text-align: center;
+			padding: 63px 15px 30px 15px;
+			position: relative;
+			
+			@media screen and (min-width: 992px) and (max-height: 805px) {
+				padding: 40px 15px 20px 15px;
+			}
+			
+			@include break-down("lg") {
+				padding: 13px 15px 20px 15px;
+			}
+
+			img {
+				margin: 0 auto;
+				max-width: 160px;
+				width: 100%;
+
+				@include break-down("lg") {
+					left: 50%;
+					max-width: 71px;
+					position: absolute;
+					top: 0;
+					transform: translate(-50%, -50%);
+					z-index: 1;
+				}
+			}
+
+			h1 {
+				color: color("white");
+				font-family: fontf("500");
+				font-size: 3.6rem;
+				line-height: 1.1em;
+				margin-top: 45px;
+				text-transform: uppercase;
+
+				@include break-down("lg") {
+					font-size: 3rem;
+				}
+			}
+
+			h3 {
+				color: color("golden-100");
+				font-family: fontf("300");
+				font-size: 1.8rem;
+				margin-top: 10px;
+
+				@include break-down("lg") {
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+}

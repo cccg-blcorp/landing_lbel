@@ -1,0 +1,57 @@
+{% extends "templates/country.twig" %}
+
+{% block content %}
+
+<div data-toggle="block-pages-parent">
+	{% include "partials/welcome.twig" %}
+	{% include "partials/register.twig" %}
+	{% include "partials/welcome-mail.twig" %}
+	{% include "partials/register-mail.twig" %}
+	{% include "partials/birthday.twig" %}
+	{% include "partials/gender.twig" %}
+	{% include "partials/main-needs.twig" %}
+	{% include "partials/favorite-products.twig" %}
+	{% include "partials/confirm-data.twig" %}
+</div>
+
+<div id="info-cuidado-personal" class="form-drag-info-content">
+	<img class="drag-info-image-desktop" src="{{ imageMulti("backgrounds/model-info.jpg") }}" alt="Model info">
+	<img class="drag-info-image-mobile" src="{{ imageMulti("backgrounds/model-info-mobile.jpg") }}" alt="Model info">
+	<button type="button" class="drag-info-button" data-toggle="close-info-drag"><span class="icon icon-times"></span></button>
+		<div class="drag-info-content-desktop">
+			<h1>Cuidado personal</h1>
+			<ul>
+				<li>Cremas</li>
+				<li>Tratamientos</li>
+				<li>Lociones</li>
+				<li>Jabones</li>
+				<li>Otros…</li>
+			</ul>
+			<h2>para cuerpo, manos y cabello.</h2>
+			<button type="button" class="button button-info button-tab-coffee" data-toggle="close-info-drag">Cerrar</button>
+		</div>
+		<div class="drag-info-content-mobile">
+			<h1>Cuidado Personal</h1>
+			<p>
+				Cremas, tratamientos, <br>
+				lociones, jabones, etc para <br>
+				cuerpo, <br>
+				manos y cabello.
+			</p>
+		</div>
+	</div>
+</div>
+
+{% include "layout/loader.twig" %}
+{% include "layout/error-server.twig" %}
+{% include "layout/error-save.twig" %}
+	
+{% include "layout/do/footerdo.twig" %}
+{% endblock %}
+
+{% block scripts_body %}
+
+<script src="{{ assetMulti("js/forge.min.js") }}"></script>
+<script src="{{ jsMulti("do") }}"></script>
+
+{% endblock scripts_body %}

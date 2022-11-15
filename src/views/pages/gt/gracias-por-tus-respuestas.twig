@@ -1,0 +1,22 @@
+{% extends "templates/country.twig" %}
+
+{% block title %}
+<title>{{ title('Gracias por tus respuestas') }}</title>
+{% endblock %}
+
+{% block content %}
+
+<div data-toggle="block-pages-parent">
+	{% include "partials/thanks.twig" %}
+</div>
+
+{% include "layout/loader.twig" %}
+	
+{% include "layout/gt/footergt.twig" %}
+{% endblock %}
+
+{% block scripts_body %}
+
+<script src="{{ jsMulti("thanks") }}"></script>
+
+{% endblock scripts_body %}

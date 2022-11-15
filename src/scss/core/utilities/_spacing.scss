@@ -1,0 +1,46 @@
+$spacing-auto: (
+	auto: auto
+);
+
+$spacing: (
+
+	margin-top: (
+		class: "mt",
+		responsive: true,
+		values: map-merge($spacing-auto, range(12, px))
+	),
+
+	margin-bottom: (
+		class: "mb",
+		responsive: true,
+		values: map-merge($spacing-auto, range(12, px))
+	),
+
+	margin-left: (
+		class: "ml",
+		responsive: true,
+		values: map-merge($spacing-auto, range(12, px))
+	),
+
+	margin-right: (
+		class: "mr",
+		responsive: true,
+		values: map-merge($spacing-auto, range(12, px))
+	),
+
+
+	column-gap: (
+		class: "gap-x",
+		responsive: true,
+		values: range(5, px)
+	),
+
+	row-gap: (
+		class: "gap-y",
+		responsive: true,
+		values: range(5, px)
+	)
+
+);
+
+$utilities: map-merge($utilities, $spacing);

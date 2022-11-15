@@ -1,0 +1,16 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+{% include "layout/loader-home.twig" %}
+{% include "layout/error-server.twig" %}
+{% include "layout/error-save.twig" %}
+	
+{% endblock %}
+
+{% block scripts_body %}
+
+<script src="{{ asset("js/forge.min.js") }}"></script>
+<script src="{{ js("main") }}"></script>
+
+{% endblock scripts_body %}

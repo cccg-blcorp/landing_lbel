@@ -1,0 +1,204 @@
+.button {
+	align-items: center;
+	border: 0;
+	cursor: pointer;
+	display: flex;
+	font-family: fontf("200");
+	font-size: 1.8rem;
+	height: 62px;
+	justify-content: center;
+	position: relative;
+	text-align: center;
+	width: 100%;
+
+	@media screen and (min-width: 992px) and (max-height: 805px) {
+		height: 55px;
+	}
+	
+	&:active {
+		transform: scale(.99);
+	}
+	
+	&::after {
+		border-bottom: 6px solid transparent;
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+		border-top: 6px solid transparent;
+		content: "";
+		display: block;
+		height: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 0;
+		z-index: 3;
+	}
+
+	&.button-loading {
+		pointer-events: none;
+
+		.button-spinner {
+			border-radius: 50%;
+			border: 3px solid color("white");
+			border-left-color: transparent;
+			height: 30px;
+			width: 30px;
+
+			animation: buttonSpin 1s linear infinite;
+		}
+	}
+
+	&.button-min {
+		height: 46px;
+	}
+	
+	&.button-primary {
+		background: color("golden-100");
+		color: color("purple-800");
+
+		&.button-loading {
+			.button-spinner {
+				border: 3px solid color("purple-800");
+				border-left-color: transparent;
+			}
+		}
+	}
+
+	&.button-secondary {
+		background: color("white");
+		color: color("purple-800");
+
+		&.button-loading {
+			.button-spinner {
+				border: 3px solid color("purple-800");
+				border-left-color: transparent;
+			}
+		}
+	}
+
+	&.button-third {
+		background: color("purple-800");
+		color: color("white");
+	}
+
+	&.button-info {
+		background: color("white");
+		color: color("coffee-500");
+		width: 230px;
+	}
+
+	&.button-primary-transparent {
+		background-image: url(#{$path_assets} + "images/backgrounds/button-primary-transparent.png");
+		background-size: cover;
+		color: color("purple-800");
+		background-position: right;
+
+		&.button-loading {
+			.button-spinner {
+				border: 3px solid color("purple-800");
+				border-left-color: transparent;
+			}
+		}
+	}
+
+	&.button-third-transparent {
+		background-image: url(#{$path_assets} + "images/backgrounds/button-third-transparent.png");
+		background-size: cover;
+		color: color("white");
+		background-position: top right;
+	}
+
+	&.button-third-large {
+		background-image: url(#{$path_assets} + "images/backgrounds/button-third-transparent-large.png");
+		background-position: top right;
+		background-size: cover;
+		color: color("white");
+		max-width: 426px;
+
+		@include max-w(685px) {
+			height: 46px;
+			position: relative;
+			z-index: 2;
+		}
+	}
+	
+	&.button-tab-purple-800 {
+		&::after {
+			border-right-color: color("purple-800");
+			border-top-color:  color("purple-800");
+		}
+	}
+
+	&.button-tab-white {
+		&::after {
+			border-right-color: color("white");
+			border-top-color:  color("white");
+		}
+	}
+
+	&.button-tab-coffee {
+		&::after {
+			border-right-color: color("coffee-500");
+			border-top-color:  color("coffee-500");
+		}
+	}
+}
+
+.button-inherit {
+	color: color("white");
+	cursor: pointer;
+	font-family: fontf("200");
+	font-size: 1.6rem;
+	text-align: center;
+	text-decoration: underline;
+	
+	&:active {
+		transform: scale(.99);
+	}
+
+	&.button-inherit-dark {
+		color: color("purple-800");
+	}
+}
+
+.button-fixed-lg-bottom {
+	@include break-down("lg") {
+		background: color("purple-800");
+		box-shadow: 0 4px 15px rgba(color("black"), .5);
+		bottom: 0;
+		left: 0;
+		padding: 16px;
+		position: fixed;
+		right: 0;
+		z-index: z-index("button-fixed");
+
+		button {
+			background: color("white") !important;
+			color: color("purple-800") !important;
+			max-width: 380px;
+			margin: 0 auto;
+
+			&::after {
+				border-right-color: color("purple-800") !important;
+				border-top-color:  color("purple-800") !important;
+			}
+
+			&.button-loading {
+				.button-spinner {
+					border: 3px solid color("purple-800");
+					border-left-color: transparent;
+				}
+			}
+		}
+	}
+}
+
+@keyframes buttonSpin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

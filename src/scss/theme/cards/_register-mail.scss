@@ -1,0 +1,77 @@
+.card {
+	&.card-primary {
+		.card-body-register-mail {
+			padding: 25px 15px 60px 15px;
+			
+			@media screen and (min-width: 992px) and (max-height: 805px) {
+				padding: 25px 15px 40px 15px;
+			}
+
+			form {
+				margin: 0 auto;
+				max-width: 361px;
+				width: 100%;
+			}
+		}
+
+		.card-header-register-mail {
+			text-align: center;
+			padding-top: 30px;
+
+			@include break-down("lg") {
+				align-items: flex-end;
+				background-image: url(#{$path_assets} + "images/backgrounds/register-mail-mobile.jpg");
+				background-position: top right;
+				background-size: cover;
+				display: flex;
+				justify-content: flex-start;
+				min-height: 150px;
+				padding: 0 0 20px 15px;
+				text-align: left;
+			}
+
+			img {
+				margin: 0 auto 25px auto;
+				max-width: 140px;
+				width: 100%;
+				
+				@media screen and (min-width: 992px) and (max-height: 805px) {
+					max-width: 130px;
+				}
+
+				@include break-down("lg") {
+					display: none;
+				}
+			}
+
+			h1 {
+				color: color("white");
+				font-family: fontf("500");
+				font-size: 3.6rem;
+				line-height: 1.1em;
+				text-transform: uppercase;
+
+				@include break-down("lg") {
+					color: color("purple-800");
+					font-size: 3rem;
+					max-width: 180px;
+					line-height: .8em;
+				}
+
+				span {
+					bottom: 4px;
+					font-family: fontf("300");
+					font-size: 1.5rem;
+					position: relative;
+					text-transform: capitalize;
+
+					@include break-down("lg") {
+						bottom: 6px;
+						font-size: 1.3rem;
+						left: 70px;
+					}
+				}
+			}
+		}
+	}
+}

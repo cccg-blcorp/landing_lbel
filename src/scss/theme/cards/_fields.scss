@@ -1,0 +1,80 @@
+.card {
+	&.card-primary {
+		.card-header-fields {
+			background-image: url(#{$path_assets} + "images/backgrounds/texture.jpg");
+			background-size: cover;
+			height: 30px;
+			width: 100%;
+
+			@media screen and (min-width: 992px) and (max-height: 805px) {
+				height: 10px;
+			}
+		}
+
+		.card-body-fields {
+			padding: 40px 15px;
+
+			@media screen and (min-width: 992px) and (max-height: 805px) {
+				padding: 25px 15px;
+			}
+
+			& > h1,
+			& > h2 {
+				color: color("purple-800");
+				font-family: fontf("500");
+				line-height: 1.1em;
+				margin-bottom: 26px;
+				text-transform: uppercase;
+				text-align: center;
+			}
+
+			& > h1 {
+				font-size: 3.6rem;
+
+				@include break-down("lg") {
+					font-size: 2.4rem;
+					line-height: 1.2em;
+				}
+			}
+
+			& > h2 {
+				font-size: 2.8rem;
+
+				@include break-down("lg") {
+					font-size: 2.3rem;
+					line-height: 1.2em;
+				}
+			}
+
+			& > h3 {
+				color: color("golden-100");
+				font-family: fontf("200");
+				font-size: 1.8rem;
+				text-align: center;
+
+				@include break-down("lg") {
+					font-size: 1.5rem;
+					color: color("purple-800");
+				}
+			}
+
+			& > p {
+				color: color("gray-700");
+				font-size: 1.6rem;
+				line-height: 1.1em;
+				margin-bottom: 30px;
+				text-align: center;
+
+				@include break-down("lg") {
+					font-size: 1.5rem;
+				}
+			}
+
+			form {
+				margin: 0 auto;
+				max-width: 361px;
+				width: 100%;
+			}
+		}
+	}
+}

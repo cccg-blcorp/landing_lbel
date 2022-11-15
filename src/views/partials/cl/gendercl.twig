@@ -1,0 +1,70 @@
+<section id="gender" class="page page-gender" data-toggle="block-page" data-active="false">
+	<div class="page-container">
+		<div class="page-wrapper">
+			<div class="card card-primary card-white">
+				<div class="progressive">
+					<div class="progressive-completed" style="width: 40%;">20%</div>
+					<div class="progressive-circle" style="left: calc(40% - 10px);">OFF</div>
+					<div class="progressive-show">VER DSCTO</div>
+				</div>
+				<div class="card-header-fields"></div>
+				<div class="card-body-fields">
+					<h1>¿Cuál es tu género?</h1>
+					<form id="form-gender">
+						<fieldset class="form-group mb-3">
+							<div class="form-datalist">
+								<input
+									id="form-gender-type"
+									type="hidden"
+									name="gd"
+									data-toggle="state-modifier"
+									data-handler="on-update"
+									value=""
+								>
+								<div class="form-datalist-options">
+									<div class="form-datalist-option" data-value="Masculino" name="Masculino">Masculino</div>
+									<div class="form-datalist-option" data-value="Femenino" name="Femenino">Femenino</div>
+									<div class="form-datalist-option" data-value="Prefiero no decirlo" name="Prefiero no decirlo">Prefiero no decirlo</div>
+									<div class="form-datalist-option" data-value="Otro" name="Otro">Otro</div>
+								</div>
+							</div>
+							<span class="form-error"></span>
+						</fieldset>
+						<button id="btn-step2" type="submit" class="button button-third button-tab-white mb-2" style="display: none;" data-toggle="button-step">
+							Guardar y Continuar <span class="icon icon-arrow-right text-size-xl ml-1"></span>
+						</button>
+						<div class="text-center">
+							<button id="btn-gender-back" type="button" class="button-inherit button-inherit-dark" data-toggle="link" data-page-to="birthday">&lt; Volver</button>
+						</div>
+					</form>
+				</div>
+				<div class="card-voucher">
+					<button type="button" data-toggle="close-voucher"><span class="icon icon-times"></span></button>
+					<div class="card-voucher-header">
+						<h3>Alcanzaste</h3>
+						<h1>20% OFF</h1>
+						<p>Sigue para que alcances tu meta de 35% OFF</p>
+					</div>
+					<div class="card-voucher-body">
+						<div class="card-voucher-code">
+							<p>Código</p>
+							<h1>UNETEX20</h1>
+						</div>
+						<p data-toggle="text-terms-voucher" data-dc="10% OFF"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-info mt-1">
+			<div class="info-simple">
+				<div class="info-simple-wrapper">
+					<figure><img src="{{ imageMulti("info/gender.jpg") }}" alt="Este dato nos permite personalizar todas las recomendaciones según tu tipo de piel."></figure>
+					<div class="info-simple-content">
+						<h1>Este dato nos permite personalizar todas las recomendaciones según tu tipo de piel.</h1>
+						<p>Ya que existen diferencias comunes en las rutinas de cuidado.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

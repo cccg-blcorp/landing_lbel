@@ -1,0 +1,13 @@
+@function range($length, $unit) {
+	$map-range: ();
+	
+	@for $i from 1 through 12 {
+		$values: (
+			$i: #{$i * 10} + $unit
+		);
+
+		$map-range: map-merge($map-range, $values);
+	}
+
+	@return $map-range;
+}

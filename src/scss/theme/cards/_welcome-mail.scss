@@ -1,0 +1,60 @@
+.card {
+	&.card-welcome-mail {
+		max-width: 370px;
+		width: 100%;
+
+		@include break-down("lg") {
+			max-width: 100%;
+			padding-bottom: 70px;
+		}
+
+		.card-body {
+			@include break-down("lg") {
+				margin: 0 auto;
+				max-width: 358px;
+				padding: 0 15px;
+			}
+
+			h1 {
+				font-family: fontf("500");
+				font-size: 4.4rem;
+				text-transform: uppercase;
+				text-align: center;
+				line-height: 1.3em;
+				margin-bottom: 30px;
+				color: color("gray-900");
+
+				@include break-down("lg") {
+					font-size: 2.8rem;
+					line-height: 1.1em;
+					color: color("white");
+					margin-bottom: 24px;
+				}
+			}
+
+			p {
+				text-align: center;
+				font-size: 1.8rem;
+				color: color("gray-700");
+				margin-bottom: 30px;
+
+				@include break-down("lg") {
+					color: color("white");
+					font-size: 1.6rem;
+					margin: 0 auto 35px auto;
+					max-width: 340px;
+				}
+
+				span {
+					display: block;
+					font-family: fontf("200");
+					color: color("black");
+
+					@include break-down("lg") {
+						color: color("white");
+					}
+				}
+			}
+		}
+	}
+}

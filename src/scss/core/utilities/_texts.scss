@@ -1,0 +1,40 @@
+$texts: (
+
+	text-align: (
+		class: "text",
+		values: (
+			center: center,
+			left: left,
+			right: right,
+			justify: justify
+		)
+	),
+
+	font-size: (
+		class: "text-size",
+		values: $sizes
+	),
+
+	font-family: (
+		class: "text-type",
+		values: $fonts
+	),
+
+	font-weight: (
+		class: "text-weight",
+		values: $weights
+	),
+
+	line-height: (
+		class: "line",
+		values: (
+			xs: 1.1em,
+			sm: 1.2em,
+			base: 1.3em,
+			md: 1.4em
+		)
+	)
+
+);
+
+$utilities: map-merge($utilities, $texts);

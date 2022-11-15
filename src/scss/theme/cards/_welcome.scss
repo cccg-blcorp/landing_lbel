@@ -1,0 +1,91 @@
+.card {
+	&.card-welcome {
+		background: color("purple-800");
+		width: 100%;
+		max-width: 470px;
+		padding: 60px 0 ;
+
+		@include break-down("lg") {
+			max-width: 100%;
+			padding: 0;
+		}
+
+		.card-header {
+			margin-bottom: 20px;
+			position: relative;
+			text-align: center;
+
+			@include break-down("lg") {
+				align-items: flex-end;
+				background-image: url(#{$path_assets} + "images/backgrounds/welcome-mobile.jpg");
+				background-size: cover;
+				display: flex;
+				height: 247px;
+				justify-content: center;
+				margin: 0;
+				padding-bottom: 20px;
+
+				&::before {
+					background: linear-gradient(0deg, rgba(1, 1, 1, 0.3) 25%, rgba(0, 0, 0, 0) 100%);
+					content: "";
+					height: 100%;
+					left: 0;
+					position: absolute;
+					top: 0;
+					width: 100%;
+					z-index: 2;
+				}
+			}
+
+			h1 {
+				color: color("white");
+				font-family: fontf("500");
+				font-size: 4.6rem;
+				text-transform: uppercase;
+				line-height: 1.1em;
+
+				@include break-down("lg") {
+					font-size: 3rem;
+					max-width: 265px;
+					position: relative;
+					z-index: 2;
+				}
+			}
+		}
+
+		.card-body {
+			padding: 0 50px;
+
+			@include break-down("lg") {
+				padding: 32px 16px;
+				max-width: 400px;
+				margin: 0 auto;
+			}
+
+			p {
+				color: color("golden-100");
+				font-size: 1.1em;
+				font-size: 1.8rem;
+				margin-bottom: 30px;
+				text-align: center;
+
+				@include break-down("lg") {
+					font-size: 1.6rem;
+				}
+
+				span {
+					font-family: fontf("200");
+					color: color("white");
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.text__nocampaign{
+	font-family: "Raleway Bold", Helvetica, sans-serif;
+	font-size: 2.4rem;
+	color: #fff;
+	display: block;
+}

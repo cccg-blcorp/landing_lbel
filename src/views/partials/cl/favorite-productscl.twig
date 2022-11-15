@@ -1,0 +1,75 @@
+<section id="favorite-products" class="page page-favorite-products" data-toggle="block-page" data-active="false">
+	<div class="page-container">
+		<div class="page-wrapper">
+			<div class="card card-primary card-white">
+				<div class="progressive">
+					<div class="progressive-completed" style="width: 80%;">30%</div>
+					<div class="progressive-circle" style="left: calc(80% - 10px);">DSCTO</div>
+					<div class="progressive-show">VER DSCTO</div>
+				</div>
+				<div class="card-header-fields"></div>
+				<div class="card-body-fields">
+					<h2 class="h2-small">¿Qué productos prefieres para tu rutina de belleza?</h2>
+					<p>Ordena de 1 a 5 arrastrando la opción según tus preferencias</p>
+					<form id="form-favorite-products">
+						<fieldset class="form-group mb-3">
+							<div class="form-drag">
+								<input
+									id="form-favorite-products-order"
+									type="hidden"
+									name="p2"
+									data-toggle="state-modifier"
+									data-handler="on-update"
+									value="Los de tecnología innovadora con resultados comprobados,Los que me ayudan a mantener mi piel sana y joven,Los de ingredientes naturales y sostenibles,Los que regalaría sin dudar,Los ideales para mi piel delicada"
+								>
+								<ul class="form-drag-options">
+									<li class="form-drag-option" data-value="Los de tecnología innovadora con resultados comprobados" name="Los de tecnología innovadora con resultados comprobados">
+										<span>Los de tecnología innovadora con resultados comprobados</span>
+										<div class="form-drag-icon"><img src="{{ imageMulti('icons/chemist.png') }}" alt="Icono Los de tecnología innovadora con resultados comprobados"></div>
+									</li>
+									<li class="form-drag-option" data-value="Los que me ayudan a mantener mi piel sana y joven" name="Los que me ayudan a mantener mi piel sana y joven">
+										<span>Los que me ayudan a mantener mi piel sana y joven</span>
+										<div class="form-drag-icon"><img src="{{ imageMulti('icons/face-2.png') }}" alt="Icono Los que me ayudan a mantener mi piel sana y joven"></div>
+									</li>
+									<li class="form-drag-option" data-value="Los de ingredientes naturales y sostenibles" name="Los de ingredientes naturales y sostenibles">
+										<span>Los de ingredientes naturales y sostenibles</span>
+										<div class="form-drag-icon"><img src="{{ imageMulti('icons/sheet.png') }}" alt="Icono Los de ingredientes naturales y sostenibles"></div>
+									</li>
+									<li class="form-drag-option" data-value="Los que regalaría sin dudar" name="Los que regalaría sin dudar">
+										<span>Los que regalaría sin dudar</span>
+										<div class="form-drag-icon"><img src="{{ imageMulti('icons/gift-2.png') }}" alt="Icono Los que regalaría sin dudar"></div>
+									</li>
+									<li class="form-drag-option" data-value="Los ideales para mi piel delicada" name="Los ideales para mi piel delicada">
+										<span>Los ideales para mi piel delicada</span>
+										<div class="form-drag-icon"><img src="{{ imageMulti('icons/drop-2.png') }}" alt="Icono Los ideales para mi piel delicada"></div>
+									</li>
+								</ul>
+							</div>
+						</fieldset>
+						<button id="btn-step4" type="submit" class="button button-third button-tab-white mb-2" data-toggle="button-step">
+							Guardar y Continuar <span class="icon icon-arrow-right text-size-xl ml-1"></span>
+						</button>
+						<div class="text-center">
+							<button id="btn-favorite-products-back" type="button" class="button-inherit button-inherit-dark" data-toggle="link" data-page-to="main-needs">&lt; Volver</button>
+						</div>
+					</form>
+				</div>
+				<div class="card-voucher">
+					<button type="button" data-toggle="close-voucher"><span class="icon icon-times"></span></button>
+					<div class="card-voucher-header">
+						<h3>Alcanzaste</h3>
+						<h1>30% OFF</h1>
+						<p>Sigue para que alcances tu meta de 35% OFF</p>
+					</div>
+					<div class="card-voucher-body">
+						<div class="card-voucher-code">
+							<p>Código</p>
+							<h1>UNETEX30</h1>
+						</div>
+						<p data-toggle="text-terms-voucher" data-dc="20% OFF"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,7 @@
+.mb-group {
+	margin-bottom: 30px; 
+
+	@media screen and (min-width: 992px) and (max-height: 805px) {
+		margin-bottom: 20px;
+	}
+}

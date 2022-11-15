@@ -1,0 +1,74 @@
+<section id="main-needs" class="page page-main-needs" data-toggle="block-page" data-active="false">
+	<div class="page-container">
+		<div class="page-wrapper">
+			<div class="card card-primary card-white">
+				<div class="progressive">
+					<div class="progressive-completed" style="width: 60%;">25%</div>
+					<div class="progressive-circle" style="left: calc(60% - 10px);">DSCTO</div>
+					<div class="progressive-show">VER DSCTO</div>
+				</div>
+				<div class="card-header-fields"></div>
+				<div class="card-body-fields">
+					<h2>¿Cuáles son tus necesidades principales?</h2>
+					<p>Ordena de 1 a 4 arrastrando la opción según tu interés</p>
+					<form id="form-main-needs">
+						<fieldset class="form-group mb-3">
+							<div class="form-drag">
+								<input
+									id="form-main-needs-order"
+									type="hidden"
+									name="p1"
+									data-toggle="state-modifier"
+									data-handler="on-update"
+									value="Cuidado del rostro,Perfumes,Maquillaje,Cuidado personal"
+								>
+								<ul class="form-drag-options">
+									<li class="form-drag-option" data-value="Perfumes" name="Perfumes">
+										<span>Perfumes</span>
+										<div class="form-drag-icon"><img src="{{ imageMulti('icons/fragrance.png') }}" alt="Icono Perfumes"></div>
+									</li>
+									<li class="form-drag-option" data-value="Cuidado del rostro" name="Cuidado del rostro">
+										<span>Cuidado del rostro</span>
+										<div class="form-drag-icon"><img src="{{ imageMulti('icons/face.png') }}" alt="Icono Cuidado del rostro"></div>
+									</li>
+									<li class="form-drag-option" data-value="Maquillaje" name="Maquillaje">
+										<span>Maquillaje</span>
+										<div class="form-drag-icon"><img src="{{ imageMulti('icons/makeup.png') }}" alt="Icono Maquillaje"></div>
+									</li>
+									<li class="form-drag-option" data-value="Cuidado personal" name="Cuidado personal">
+										<span>Cuidado personal</span>
+										<div class="form-drag-icon"><img src="{{ imageMulti('icons/drop.png') }}" alt="Icono Cuidado personal"></div>
+										<div class="form-drag-info">
+											<span class="form-drag-info-icon icon icon-info" data-toggle="info-drag" data-target="#info-cuidado-personal"></span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</fieldset>
+						<button id="btn-step3" type="submit" class="button button-third button-tab-white mb-2" data-toggle="button-step">
+							Guardar y Continuar <span class="icon icon-arrow-right text-size-xl ml-1"></span>
+						</button>
+						<div class="text-center">
+							<button id="btn-main-needs-back" type="button" class="button-inherit button-inherit-dark" data-toggle="link" data-page-to="gender">&lt; Volver</button>
+						</div>
+					</form>
+				</div>
+				<div class="card-voucher">
+					<button type="button" data-toggle="close-voucher"><span class="icon icon-times"></span></button>
+					<div class="card-voucher-header">
+						<h3>Alcanzaste</h3>
+						<h1>25% OFF</h1>
+						<p>Sigue para que alcances tu meta de 35% OFF</p>
+					</div>
+					<div class="card-voucher-body">
+						<div class="card-voucher-code">
+							<p>Código</p>
+							<h1>UNETEX25</h1>
+						</div>
+						<p data-toggle="text-terms-voucher" data-dc="15% OFF"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

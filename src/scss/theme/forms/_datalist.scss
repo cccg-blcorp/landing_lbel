@@ -1,0 +1,39 @@
+.form {
+	&-datalist {
+		margin: 0 auto;
+		max-width: 226px;
+		width: 100%;
+
+		&-options {
+			width: 100%;
+		}
+
+		&-option {
+			align-items: center;
+			background: color("golden-100");
+			border-radius: 22px;
+			box-shadow: 0 3px 6px rgba(color("black"), .16);
+			cursor: pointer;
+			display: flex;
+			font-size: 1.2rem;
+			height: 37px;
+			justify-content: center;
+			margin-bottom: 8px;
+			text-align: center;
+			text-transform: uppercase;
+			user-select: none;
+			width: 100%;
+			
+			&.selected {
+				background: color("white");
+				color: color("purple-800");
+				border: 1px solid color("purple-800");
+				box-shadow: 0 3px 6px rgba(color("purple-800"), .5);
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

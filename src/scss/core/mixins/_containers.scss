@@ -1,0 +1,24 @@
+$padding-x: 16px;
+$padding-x-md: 30px;
+
+@mixin containers() {
+	@each $breakpoint-name, $breakpoint-value in $breakpoints {
+		$classname: "container-#{$breakpoint-name}";
+		
+		@if $breakpoint-name == "xjust" {
+			$classname: "container";
+		}
+
+		.#{$classname} {
+			margin: 0 auto;
+			max-width: #{$breakpoint-value + ($padding-x * 2)};
+			padding: 0 $padding-x;
+			width: 100%;
+
+			@include break-up("md") {
+				max-width: #{$breakpoint-value + ($padding-x-md * 2)};
+				padding: 0 $padding-x-md;
+			}
+		}
+	}
+}

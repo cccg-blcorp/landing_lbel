@@ -1,0 +1,129 @@
+.page {
+	background-attachment: fixed;
+	background-size: cover;
+	min-height: calc(100vh - 60px);
+	display: none;
+	padding: 10px 0;
+	opacity: 0;
+
+	&[data-active="true"] {
+		align-items: center;
+		display: flex;
+		justify-content: flex-end;
+
+		animation-name: fadeInPage;
+		animation-duration: .8s;
+		animation-fill-mode: both;
+	}
+
+	@include break-down("lg") {
+		min-height: inherit;
+		background: none !important;
+		padding: 0;
+	}
+
+	&.page-p-md {
+		padding: 20px 0;
+
+		@include break-down("lg") {
+			padding: 0;
+		}
+	}
+
+	&.page-welcome,
+	&.page-terms {
+		background-image: url(#{$path_assets} + "images/backgrounds/welcome.jpg");
+	}
+	
+	&.page-thanks{
+		background-image: url(#{$path_assets} + "images/backgrounds/gracias.jpg");
+	}
+
+	&.page-welcome-mail {
+		background-image: url(#{$path_assets} + "images/backgrounds/welcome.jpg");
+
+		@include break-down("lg") {
+			background-image: url(#{$path_assets} + "images/backgrounds/welcome-mobile.jpg") !important;
+			background-position: center !important;
+			min-height: 626px !important;
+			align-items: flex-end;
+		}
+	}
+
+	&.page-register {
+		background-image: url(#{$path_assets} + "images/backgrounds/register.jpg");
+	}
+
+	&.page-register-mail {
+		background-image: url(#{$path_assets} + "images/backgrounds/register-mail.jpg");
+	}
+
+	&.page-birthday {
+		background-image: url(#{$path_assets} + "images/backgrounds/birthday.jpg");
+	}
+	
+	&.page-gender {
+		background-image: url(#{$path_assets} + "images/backgrounds/gender.jpg");
+		// background-size: auto 100%;
+		background-repeat: no-repeat;
+	}
+
+	&.page-main-needs {
+		background-image: url(#{$path_assets} + "images/backgrounds/main-needs.jpg");
+		background-position: bottom;
+	}
+
+	&.page-favorite-products {
+		background-image: url(#{$path_assets} + "images/backgrounds/favorite-products.jpg");
+	}
+
+	&.page-confirm-data {
+		background-image: url(#{$path_assets} + "images/backgrounds/confirm-data.jpg");
+		// background-size: auto 100%;
+		/*background-position: -80px;*/
+		background-repeat: no-repeat;
+	}
+
+	&.page-thanks {
+		.page-wrapper {
+			min-height: calc(100vh - 60px);
+			align-items: center;
+
+			@include break-down("lg") {
+				min-height: inherit;
+			}
+		}
+	}
+
+	&-container {
+		margin: 0 auto;
+		max-width: 1120px;
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 100%;
+
+		@include break-down("lg") {
+			max-width: 100%;
+			padding: 0;
+		}
+	}
+
+	&-wrapper {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&-info {
+		width: 100%;
+	}
+}
+
+@keyframes fadeInPage {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

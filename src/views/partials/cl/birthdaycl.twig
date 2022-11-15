@@ -1,0 +1,77 @@
+<section id="birthday" class="page page-birthday" data-toggle="block-page" data-active="false">
+	<div class="page-container">
+		<div class="page-wrapper">
+			<div class="card card-primary card-purple">
+				<div class="progressive">
+					<div class="progressive-completed" style="width: 20%;">15%</div>
+					<div class="progressive-circle" style="left: calc(20% - 10px);">OFF</div>
+					<div class="progressive-show">VER DSCTO</div>
+				</div>
+				<div class="card-supheader-birthday"></div>
+				<div class="card-header-birthday">
+					<img src="{{ imageMulti('icons/birthday.png') }}" alt="Icono Cumpleaños">
+					<h1>celebremos juntos</h1>
+					<img src="{{ imageMulti('icons/tu_cumple.svg') }}" alt="¡Tu cumpleaños!" style="max-width: 280px;margin: 15px auto 0;transform: none;position: initial;">
+				</div>
+				<div class="card-body-birthday">
+					<form id="form-birthday">
+						<fieldset class="form-group mb-3">
+							<label for="form-birthday-date" class="form-label form-label-ligth">Dinos cuándo cumples y te sorprenderemos</label>
+							<div class="form-field-date-picker">
+								<label for="form-birthday-date" class="icon icon-calendar"></label>
+								<input
+									id="form-birthday-date"
+									type="text"
+									data-type="date-picker"
+									name="bd"
+									data-toggle="state-modifier"
+									data-handler="on-date"
+									class="form-field form-field-outline form-field-date"
+									placeholder="DD/MM/AAAA"
+									readonly
+								>
+							</div>
+							<span class="form-error"></span>
+						</fieldset>
+						<button id="btn-step1b" type="submit" class="button button-secondary button-tab-purple-800 mb-2" data-toggle="button-step">
+							Guardar y Continuar <span class="icon icon-arrow-right text-size-xl ml-1"></span>
+						</button>
+						<div class="text-center">
+							<button id="btn-birthday-back" type="button" class="button-inherit" data-toggle="link" data-page-to="welcome-mail">&lt; Volver</button>
+						</div>
+					</form>
+				</div>
+				<div class="card-voucher">
+					<button type="button" data-toggle="close-voucher"><span class="icon icon-times"></span></button>
+					<div class="card-voucher-header">
+						<h3>Alcanzaste</h3>
+						<h1>15% OFF</h1>
+						<p>Sigue para que alcances tu meta de 35% OFF</p>
+					</div>
+					<div class="card-voucher-body">
+						<div class="card-voucher-code">
+							<p>Código</p>
+							<h1>UNETEX15</h1>
+						</div>
+						<p data-toggle="text-terms-voucher" data-dc="15% OFF"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-info mt-lg-3">
+			<div class="info">
+				<div class="info-wrapper">
+					<figure><img src="{{ imageMulti('info/birthday.jpg') }}" alt="¡Queremos brindarte recomendaciones a tu medida!"></figure>
+					<div class="info-content">
+						<h1>¡Queremos brindarte recomendaciones a tu medida!</h1>
+						<p>
+							Cada tipo de piel tiene necesidades especiales de acuerdo
+							a su edad, ayúdanos a darte la mejor recomendación
+							al guardar y continuar.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

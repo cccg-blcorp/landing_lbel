@@ -1,0 +1,11 @@
+@function radius($radius-name) {
+	$radius-size: 0px;
+
+	@each $radius-key, $radius-value in $radius {
+		@if $radius-name == #{"" + $radius-key} {
+			$radius-size: $radius-value;
+		}
+	}
+
+	@return $radius-size;
+}

@@ -1,0 +1,292 @@
+.form {
+	&-drag {
+		&-options {
+			list-style: none;
+			counter-reset: thing-counter;
+		}
+
+		&-option {
+			align-items: center;
+			background: color("white");
+			border-radius: 25px;
+			border: 1px solid color("purple-800");
+			color: color("purple-800");
+			counter-increment: thing-counter;
+			cursor: grab;
+			display: flex;
+			font-family: fontf("200");
+			height: 50px;
+			line-height: 1em;
+			margin-bottom: 15px;
+			margin-left: 50px;
+			padding: 0 60px 0 20px;
+			position: relative;
+			user-select: none;
+
+			@include max-w(342px) {
+				font-size: 1.2rem;
+			}
+
+			&.sortable-chosen.sortable-fallback.sortable-drag {
+				background: color("purple-800");
+				color: color("white");
+
+				&::before,
+				&::after {
+					display: none;
+				}
+			}
+
+			&.is-animated {
+				animation-name: dragOptionAnimation;
+				animation-duration: 1s;
+				animation-fill-mode: both;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&::before,
+			&::after {
+				color: color("blue-900");
+				cursor: default;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			&::before {
+				content: counter(thing-counter);
+				font-family: fontf("200");
+				font-size: 3rem;
+				left: -50px;
+			}
+
+			&::after {
+				content: "\e003";
+				font-family: fontf("icons");
+				font-size: 1.9rem;
+				left: -25px;
+			}
+		}
+
+		&-icon {
+			height: 54px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 54px;
+			z-index: 1;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&-info {
+			position: absolute;
+			right: 65px;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 1;
+
+			&-icon {
+				font-size: 1.6rem;
+				cursor: pointer;
+			}
+
+			&-content {
+				background: color("coffee-500");
+				bottom: 0;
+				height: 100%;
+				overflow-y: auto;
+				position: fixed;
+				right: -375px;
+				top: 0;
+				transition: ease all .1s;
+				width: 375px;
+				z-index: z-index("drag-info");
+				@include scrollbar(color("white"), color("coffee-500"));
+
+				&.is-show {
+					right: 0;
+					transition: ease all .3s;
+				}
+
+				@include break-down("lg") {
+					background: transparent;
+					bottom: 0;
+					height: auto;
+					left: 0;
+					overflow-y: inherit;
+					right: 0;
+					top: calc(100% + 32px);
+					width: 100%;
+
+					&.is-show {
+						top: inherit;
+					}
+				}
+
+				.drag-info-image-mobile {
+					display: none;
+					
+					@include break-down("lg") {
+						display: block;
+						height: 100%;
+						object-fit: cover;
+						object-position: top right;
+						pointer-events: none;
+						position: absolute;
+						right: 0;
+						top: 0;
+						width: 100%;
+						z-index: 1;
+					}
+				}
+
+				.drag-info-image-desktop {
+					height: 60vh;
+					object-fit: cover;
+					object-position: left top;
+					width: 100%;
+
+					@media screen and (min-width: 992px) and (max-height: 900px) {
+						height: 55vh;
+					}
+
+					@media screen and (min-width: 992px) and (max-height: 780px) {
+						height: 52vh;
+					}
+
+					@media screen and (min-width: 992px) and (max-height: 725px) {
+						height: 50vh;
+					}
+
+					@include break-down("lg") {
+						display: none;
+					}
+				}
+
+				.drag-info-button {
+					display: none;
+
+					@include break-down("lg") {
+						background: color("coffee-500");
+						bottom: 100%;
+						display: block;
+						height: 32px;
+						position: absolute;
+						right: 0;
+						width: 32px;
+						z-index: 3;
+						color: color("white");
+					}
+				}
+
+				.drag-info-content-mobile {
+					color: color("white");
+					display: none;
+					font-size: 1.6rem;
+					padding: 20px 40px;
+					position: relative;
+					z-index: 2;
+					
+					@include break-down("lg") {
+						display: block;
+					}
+
+					@include break-down("md") {
+						padding: 20px 30px;
+					}
+
+					@include break-down("sm") {
+						padding: 20px;
+					}
+
+					h1 {
+						font-family: fontf("200");
+						margin-bottom: 15px;
+					}
+
+					p {
+						line-height: 1.3em;
+					}
+				}
+
+				.drag-info-content-desktop {
+					padding: 30px 44px;
+
+					@include break-down("lg") {
+						display: none;
+					}
+
+					h1,
+					h2 {
+						color: color("white");
+						font-family: fontf("200");
+						font-size: 1.8rem;
+						line-height: 1.1em;
+						text-transform: none;
+					}
+
+					h1 {
+						margin-bottom: 20px;
+					}
+
+					h2 {
+						margin-bottom: 20px;
+					}
+
+					ul {
+						margin-bottom: 20px;
+
+						li {
+							color: color("white");
+							font-size: 1.8rem;
+							line-height: 1.4em;
+
+							&::before {
+								content: "\25b6";
+								font-size: 1.4rem;
+								margin-right: 10px;
+								position: relative;
+								bottom: 2px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.form-drag-option > span {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+  
+	&::before {
+	  content: '';
+	  display: block;
+	  width: 12px;
+	  min-width: 12px;
+	  height: 2px;
+	  background: #20004e;
+	  box-shadow: 0 3px #20004e, 0 -3px #20004e;
+	}
+  }
+
+@keyframes dragOptionAnimation {
+	0% {
+		background: color("purple-800");
+		color: color("white");
+	}
+
+	100% {
+		background: color("white");
+		color: color("purple-800");
+	}
+}

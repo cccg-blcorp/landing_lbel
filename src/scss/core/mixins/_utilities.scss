@@ -1,0 +1,24 @@
+@mixin utilities($utils) {
+	@each $property, $util in $utils {
+		$values: map-get($util, "values");
+		$class: map-get($util, "class");
+		$responsive: map-get($util, "responsive");
+	
+		@each $property-class, $property-value in $values {
+			$classname: "#{$class}-#{$property-class}";
+	
+			.#{$classname} {
+				#{$property}: $property-value;
+			}
+
+			@if $responsive {
+				@include responsive((
+					class: $class,
+					property: $property,
+					property-value: $property-value,
+					property-class: $property-class
+				))
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+@function fontf($font-name) {
+	$font-family: Helvetica, sans-serif;
+
+	@each $font-key, $font-value in $fonts {
+		@if $font-name == #{"" + $font-key} {
+			$font-family: $font-value;
+		}
+	}
+
+	@return $font-family;
+}
+
+@function fontsi($fontsize-name) {
+	$font-size: 16px;
+
+	@each $fontsize-key, $fontsize-value in $sizes {
+		@if $fontsize-name == #{"" + $fontsize-key} {
+			$font-size: $fontsize-value;
+		}
+	}
+
+	@return $font-size;
+}

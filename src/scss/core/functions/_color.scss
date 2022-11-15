@@ -1,0 +1,11 @@
+@function color($color-name) {
+	$color: transparent;
+
+	@each $color-key, $color-value in $colors {
+		@if $color-name == #{"" + $color-key} {
+			$color: $color-value;
+		}
+	}
+
+	@return $color;
+}
