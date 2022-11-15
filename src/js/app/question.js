@@ -1,4 +1,4 @@
-export const sendData = (data) => {
+export const sendData = (data, errorFunction, successFunction) => {
 	console.log("method sendData", data);
 	/*Credenciales PROD */
 	var apiUrl = "https://api.belcorp.biz";
@@ -40,6 +40,12 @@ export const sendData = (data) => {
 				},
 			}),
 		};
-		$.ajax(ecrmCampaignsSettings);
+		$.ajax(ecrmCampaignsSettings)
+			.done(function (data, textStatus, jqXHR) {
+				successFunction(data, textStatus, jqXHR);
+			})
+			.fail(function (jqXHR, textStatus, errorThrown) {
+				errorFunction(jqXHR, textStatus, errorThrown);
+			});
 	});
 };

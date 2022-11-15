@@ -97,9 +97,22 @@ function buttonSend() {
 			console.log(data);
 			if (idButton === "btn-respuesta-concurso") {
 				console.log("accion boton");
-				sendData(data);
+				sendData(data, errorResponse, successResponse);
 			}
 		});
 	});
 }
 
+function successResponse(data, textStatus, jqXHR){
+	console.log('respuesta correcta')
+	JSON.stringify(data)
+	JSON.stringify(textStatus)
+	JSON.stringify(jqXHR)
+}
+
+function errorResponse(jqXHR, textStatus, errorThrown){
+	console.error('respuesta con errores')
+	JSON.stringify(textStatus);
+	JSON.stringify(errorThrown);
+	JSON.stringify(jqXHR);
+}
