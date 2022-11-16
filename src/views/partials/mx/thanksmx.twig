@@ -1,65 +1,7 @@
 <section id="thanks" class="page page-thanks" data-toggle="block-page" data-active="true">
-	<script type="text/javascript">
-		function submitRespuesta () {
-			
-			const data = document.getElementById("textareaRpta").value;
-
-			console.log('method sendData',data);
-
-			if(data === "" || data === null){
-				document.getElementById("validation_message").style.display = 'block';				
-			} else {
-				
-				/*Credenciales PROD */
-				// var apiUrl = "https://api.belcorp.biz";
-				// var clientId = "interfacesIKU";
-				// var clientSecret = "vjm8GduiaTUpqT17gYW4jYqk8S88oC5DoRg2/WJZvpg=";
-
-				// Credenciales QA
-				/*
-				var apiUrl = "https://api-qa.belcorp.biz";
-				var clientId = "interfacesIKU";
-				var clientSecret = "2KgfGQ6g7cKh/G7GwaSFkbOjQS8VQ9QrzbXieSUlcrw=";
-
-				var oauthTokenSettings = {
-					url: apiUrl + "/oauth/token",
-					method: "POST",
-					headers: {
-						"Content-Type": "application/x-www-form-urlencoded",
-					},
-					data: {
-						grant_type: "client_credentials",
-						client_id: clientId,
-						client_secret: clientSecret,
-						scope: "scopeIKU",
-					},
-				};
-
-				$.ajax(oauthTokenSettings).done(function (response) {
-					var ecrmCampaignsSettings = {
-						url: apiUrl + "/ecrm_campaigns",
-						method: "POST",
-						headers: {
-							"Content-Type": "application/json",
-							"x-access-token": response.access_token,
-						},
-						data: JSON.stringify({
-							userId: localStorage.getItem('idCDC'),
-							initiative: 'LB_PROGRESSIVE_PROFILING',
-							fields: {
-								comment: data
-							},
-						}),
-					};
-					$.ajax(ecrmCampaignsSettings);
-				});*/
-
-				document.getElementById("seccion_formulario").style.display = 'none';
-				document.getElementById("agradecimiento_formulario").style.display = 'block';
-
-			}
-		} 
-	</script>
+	
+	<script type="text/javascript" src="src\js\thanks.js"></script>
+	
 	<div class="page-container">
 		<div id="thanks-page-wrapper" class="page-wrapper">
 			<div class="card card-thanks">
@@ -95,9 +37,9 @@
 									<p style="margin-bottom: 20px">Para finalizar tu participación en el concurso, completa esta pregunta:</p>
 									<p style="font-weight: bold">¿Qué esperas que los productos de L'BEL hagan por tu piel?</p>
 									
-									<textarea id="textareaRpta" class="form-textarea" rows="4" cols="47" style="margin-top: 20px; margin-bottom: 17px"></textarea>
+									<textarea id="textareaRpta" class="form-textarea" rows="5" cols="47" style="padding: 7px; margin-top: 20px; margin-bottom: 10px; border:1px solid black;"></textarea>
 									<label id="validation_message" style="display: none; color:red">Ingrese una respuesta no vacía</label>
-									<button onClick="submitRespuesta()" id="btn-respuesta-concurso" type="submit" class="button button-third button-tab-white mt-lg-3" data-toggle="button-step">
+									<button onClick="buttonSend()" id="btn-respuesta-concurso" type="submit" class="button button-third button-tab-white mt-lg-3" data-toggle="button-step">
 										Enviar Respuesta <span class="icon icon-arrow-right text-size-xl ml-1"></span>
 									</button>
 								</div>
@@ -106,7 +48,7 @@
 								<div id="agradecimiento_formulario" style="display: none">
 									<p style="margin-bottom: 20px">Gracias por responder la pregunta</p>
 									<p style="font-weight: bold; margin-bottom: 17px">Te estaremos comunicando los resultados del concurso el 14/12/22. ¡Aprovecha tu descuento! </p>
-									<div><a id="link-buy-here" href="https://lbel.tiendabelcorp.com/mx/cuidado-de-la-piel/c/lbel-01" target="_blank" class="button button-third button-tab-white mt-lg-3">¡Compra aquí!</a></div>
+									<div><a id="link-buy-here" href="https://lbel.tiendabelcorp.com.mx/cuidado-de-la-piel/c" target="_blank" class="button button-third button-tab-white mt-lg-3">¡Compra aquí!</a></div>
 								</div>
 
 							</div>
@@ -145,7 +87,7 @@
 						<h1>¿Quieres conocer los productos de cuidado adecuados para ti?</h1>
 						<p>Prueba ahora el avanzado diagnóstico* de piel L’BEL.</p>
 						<a
-							href="https://beautytech.lbel.com/co/avanzadodiagnosticodepiel?_ga=2.130669387.51794443.1649695657-790663382.1629757044&_gac=1.52045469.1649866332.EAIaIQobChMIyoScrLWR9wIVAZXICh15TwECEAAYASAAEgJ5s_D_BwE"
+							href="https://beautytech.lbel.com/mx/avanzadodiagnosticodepiel"
 							target="_blank"
 							class="button button-third-large"
 						>¡Quiero saber!</a>

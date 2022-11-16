@@ -96,8 +96,15 @@ function buttonSend() {
 			const data = document.getElementById("textareaRpta").value;
 			console.log(data);
 			if (idButton === "btn-respuesta-concurso") {
-				console.log("accion boton");
-				sendData(data, errorResponse, successResponse);
+				if(data === "" || data === null){
+					//Mensaje de cadena vacia
+					document.getElementById("validation_message").style.display = 'block';				
+				} else{
+					sendData(data, errorResponse, successResponse)
+					//Se esconde el formulario y se agradece registro
+					document.getElementById("seccion_formulario").style.display = 'none';
+					document.getElementById("agradecimiento_formulario").style.display = 'block';
+				}
 			}
 		});
 	});

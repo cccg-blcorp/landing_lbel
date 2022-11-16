@@ -23,10 +23,10 @@ const DEFAULT_MAIN_NEEDS = 'Cuidado del rostro,Perfumes,Maquillaje,Cuidado perso
 const DEFAULT_FAVORITE_PRODUCTS = 'Los de tecnología innovadora con resultados comprobados,Los que me ayudan a mantener mi piel sana y joven,Los de ingredientes naturales y sostenibles,Los que regalaría sin dudar,Los ideales para mi piel delicada'
 
 const BUY_LINKS = {
-	'perfumes': 'https://lbel.tiendabelcorp.com/%country%/perfumes/c/lbel-03',
-	'cuidado del rostro': 'https://lbel.tiendabelcorp.com/%country%/cuidado-de-la-piel/c/lbel-01',
-	'maquillaje': 'https://lbel.tiendabelcorp.com/%country%/maquillaje/c/lbel-02',
-	'cuidado personal': 'https://lbel.tiendabelcorp.com/%country%/cuidado-personal/c/lbel-04',
+	'perfumes': 'https://lbel.tiendabelcorp.com/%country%/perfumes/c',
+	'cuidado del rostro': 'https://lbel.tiendabelcorp.com/%country%/cuidado-de-la-piel/c',
+	'maquillaje': 'https://lbel.tiendabelcorp.com/%country%/maquillaje/c',
+	'cuidado personal': 'https://lbel.tiendabelcorp.com/%country%/cuidado-personal/c',
 }
 // https://lbel.tiendabelcorp.com/cl/cuidado-de-la-piel/c/lbel-01
 
