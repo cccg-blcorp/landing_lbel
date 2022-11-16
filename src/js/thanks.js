@@ -101,9 +101,6 @@ function buttonSend() {
 					document.getElementById("validation_message").style.display = 'block';				
 				} else{
 					sendData(data, errorResponse, successResponse)
-					//Se esconde el formulario y se agradece registro
-					document.getElementById("seccion_formulario").style.display = 'none';
-					document.getElementById("agradecimiento_formulario").style.display = 'block';
 				}
 			}
 		});
@@ -115,6 +112,10 @@ function successResponse(data, textStatus, jqXHR){
 	JSON.stringify(data)
 	JSON.stringify(textStatus)
 	JSON.stringify(jqXHR)
+
+	//Se esconde el formulario y se agradece registro
+	document.getElementById("seccion_formulario").style.display = 'none';
+	document.getElementById("agradecimiento_formulario").style.display = 'block';
 }
 
 function errorResponse(jqXHR, textStatus, errorThrown){
