@@ -1,7 +1,4 @@
 <section id="thanks" class="page page-thanks" data-toggle="block-page" data-active="true">
-	
-	<script type="text/javascript" src="src\js\thanks.js"></script>
-	
 	<div class="page-container">
 		<div id="thanks-page-wrapper" class="page-wrapper">
 			<div class="card card-thanks">
@@ -9,70 +6,27 @@
 					<h1>Gracias por tus respuestas</h1>
 				</div>
 				<div id="thanks-body" class="card-body" style="display: none;">
-					{# <div class="card-body-header">
+					<div class="card-body-header">
 						<p>¡Alcanzaste tu meta! <span>Ganaste</span></p>
-					</div> #}
+					</div>
 					<div class="card-body-content">
 						<div class="card-body-wrapper">
-							<div style="text-align: center">
-								<p><span style="font-size: 22px">Ganaste</span></p>
-								<div class="card-body-dscto">
-									<img src="{{ imageMulti("icons/dscto.png") }}" alt="En tu próxima compra">
-									<p>En tu próxima compra</p>
-								</div>
+							<div class="card-body-dscto">
+								<img src="{{ imageMulti("icons/dscto.png") }}" alt="En tu próxima compra">
+								<p>En tu próxima compra</p>
 							</div>
-							
-							<div class="card-body-text" style="padding-top: 55px">
+							<div class="card-body-text">
 								<p>En tu próxima compra</p>
 								<div class="card-body-coupon">
 									<h3>Usa el cupón</h3>
-									<h1 style="font-weight: bold">LBEL15</h1>
+									<h1>LBEL15</h1>
 								</div>
+								<a id="link-buy-here" href="https://lbel.tiendabelcorp.com.mx/cuidado-de-la-piel/c" target="_blank" class="button button-third-transparent button-min">¡Compra aquí!</a>
 							</div>
 						</div>
-
-						<div style="margin-top: 25px">
-							<div class="card-body-text">
-								<div id="seccion_formulario">
-									<p style="margin-bottom: 20px">Para finalizar tu participación en el concurso, completa esta pregunta:</p>
-									<p style="font-weight: bold">¿Qué esperas que los productos de L'BEL hagan por tu piel?</p>
-									
-									<textarea id="textareaRpta" class="form-textarea" rows="5" cols="47" style="padding: 7px; margin-top: 20px; margin-bottom: 10px; border:1px solid black;"></textarea>
-									<label id="validation_message" style="display: none; color:red">Ingrese una respuesta no vacía</label>
-									<button onClick="buttonSend()" id="btn-respuesta-concurso" type="submit" class="button button-third button-tab-white mt-lg-3" data-toggle="button-step">
-										Enviar Respuesta <span class="icon icon-arrow-right text-size-xl ml-1"></span>
-									</button>
-								</div>
-
-								
-								<div id="agradecimiento_formulario" style="display: none">
-									<p style="margin-bottom: 20px">Gracias por responder la pregunta</p>
-									<p style="font-weight: bold; margin-bottom: 17px">Estaremos comunicando los resultados del concurso a través de nuestras redes sociales el 15/12/22. ¡Aprovecha tu descuento! </p>
-									<div><a id="link-buy-here" href="https://lbel.tiendabelcorp.com.mx/cuidado-de-la-piel/c" target="_blank" class="button button-third button-tab-white mt-lg-3">¡Compra aquí!</a></div>
-								</div>
-
-							</div>
-
-							{# <div class="card-body-wrapper">
-								<div class="card-body-dscto">
-									<img src="{{ imageMulti("icons/dscto.png") }}" alt="En tu próxima compra">
-									<p>En tu próxima compra</p>
-								</div>
-								<div class="card-body-text">
-									<p>En tu próxima compra</p>
-									<div class="card-body-coupon">
-										<h3>Usa el cupón</h3>
-										<h1>UNETEX25</h1>
-									</div>
-									<a id="link-buy-here" href="https://lbel.tiendabelcorp.com/mx/cuidado-de-la-piel/c/lbel-01" target="_blank" class="button button-third-transparent button-min">¡Compra aquí!</a>
-								</div>
-							</div> #}
-						</div>
-
-
 					</div>
 					<div id="text-terms-container" class="card-body-footer" style="display: none;">
-						<p style="font-size: 10px">*Aplica 1 vez por usuario. No acumulable con otras promociones.</p>
+						<p>*Aplica 1 vez por usurario. No acumulable con otras promociones.</p>
 						<p id="text-terms"></p>
 						<p><a href="{{ page('terminos-y-condiciones') }}" target="_blank">TyC</a></p>
 					</div>
